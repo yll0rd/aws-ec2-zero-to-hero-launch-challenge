@@ -1,74 +1,93 @@
-LEVEL 5: Security Group Deep Dive
-Objective: Master cloud firewalls through experimentation.
+## LEVEL 5: Security Group Deep Dive
 
-🔬 Experiment
-Test 1: Remove HTTP Access
+**Objective:** Master cloud firewalls through experimentation.
 
-Go to Security Groups → zth-security-group
-Delete the HTTP (port 80) rule
-Try to access http://<Your-IP> in browser
-Record what happens
+---
 
-Test 2: Restore Access
+### 🔬 Experiment
 
-Add back the HTTP rule
-Refresh browser
-Record what happens
+### Test 1: Remove HTTP Access
 
-
-✍️ Write Your Explanation
-Create security-group-explanation.txt:
-What are Security Groups?
-Line 1: _______________________________________________
-Line 2: _______________________________________________
-
-What I learned from the experiment:
-_______________________________________________
-_______________________________________________
-
-📸 Required Screenshots
-Save in this folder:
-
-01-rules-with-http.png
-
-Security group showing HTTP rule enabled
+1. **Open the [AWS EC2 Console](https://us-east-1.console.aws.amazon.com/ec2/home?#Home:)** and go to **Security Groups**.  
+2. Find and click on the security group named **zth-security-group**.  
+3. Click on the **Inbound Rules** tab, then click **Edit**.  
+4. Find the rule that allows **HTTP (port 80)** traffic and delete it.  
+5. Save your changes.  
+6. Now, try to open your website by entering `http://<Your-IP>` in your browser.  
+7. Notice what happens — does the page load or not?.
 
 
-02-rules-without-http.png
+### Test 2: Restore HTTP Access
 
-Security group with HTTP rule removed
+1. Go back to the **Inbound Rules** of the **zth-security-group** and click **Edit** again.  
+2. Add a new rule:  
+   - **Type:** HTTP  
+   - **Port:** 80 (this will be set automatically)  
+   - **Source:** Anywhere (0.0.0.0/0)  
+3. Save the rule.  
+4. Refresh your browser and visit `http://<Your-IP>` again.  
+5. Observe what happens now.
 
+---
 
-03-browser-blocked.png
+### ✍️ Write Your Explanation
 
-Browser unable to connect (rule removed)
+Create a file named `security-group-explanation.txt` and answer:
 
+**What are Security Groups?**  
+Line 1: _______________________________________________  
+Line 2: _______________________________________________  
 
-04-browser-working.png
+**What I learned from the experiment:**  
+_______________________________________________  
+_______________________________________________  
 
-Browser working again (rule restored)
+---
 
+### 📸 Required Screenshots
 
+Save these screenshots in your project folder:
 
+- **01-rules-with-http.png**  
+  Security group showing HTTP rule enabled
 
-📋 Final Security Group Rules
-Your zth-security-group should have:
+- **02-rules-without-http.png**  
+  Security group with HTTP rule removed
 
- SSH (22) from your IP
- HTTP (80) from anywhere (0.0.0.0/0)
+- **03-browser-blocked.png**  
+  Browser unable to connect (HTTP rule removed)
 
+- **04-browser-working.png**  
+  Browser working again (HTTP rule restored)
 
-📤 Submission
-bashgit add level-5-security-groups/
+---
+
+### 📋 Final Security Group Rules
+
+Make sure your **zth-security-group** has these inbound rules:
+
+- **SSH (port 22)** from your IP address only  
+- **HTTP (port 80)** from anywhere (`0.0.0.0/0`)
+
+---
+
+### 📤 Submission
+
+```bash
+git add level-5-security-groups/
 git commit -m "Complete Level 5: Security Groups"
 git push origin main
+```
 
-✅ Completion
+---
 
- HTTP rule tested (remove + restore)
- Explanation written
- 4 screenshots saved
- Files committed
+### ✅ Completion Checklist
 
-🏆 Badge Earned: 🔵 Security Defender
-Next: Level 6 →
+- [ ] HTTP rule tested (removed and restored)  
+- [ ] Explanation written in `security-group-explanation.txt`  
+- [ ] 4 screenshots saved  
+- [ ] Files committed  
+
+---
+
+**Next:** → [Level 6](../level-6-lifecycle/README.md)
