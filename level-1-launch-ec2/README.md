@@ -3,11 +3,20 @@
 **Objective:**  
 Create and run your first virtual computer in AWS.
 
+### 💻 Requirements Before You Start
+
+- Open the project folder with your preferred code editor or IDE (e.g., VS Code).
+- Open the integrated terminal within your editor/IDE to run the commands below.
+- Move to the current task directory:
+  ```bash
+  cd level-1-launch-ec2
+  ```
+
 ---
 
 #### 🛠️ Steps
 
-1. **AWS Console**  
+1. Go to **[AWS Console](https://us-east-1.console.aws.amazon.com/console/home)**  
    - Search for **"EC2"**  
    - Click **Launch Instance**
      <img width="1901" height="967" alt="image(2)" src="https://github.com/user-attachments/assets/54bdf40b-dbaf-4a05-acdf-51dee04711bf" />
@@ -89,4 +98,4 @@ git push origin main
 
 #### 🏆 Badge Earned: 🟡 Instance Launcher
 
-**Next:** → [Level 2](https://github.com/awssccuba/aws-ec2-zero-to-hero-launch-challenge/blob/main/level-2-connect-ssh/README.md)
+**Next:** → [Level 2](../level-2-connect-ssh/README.md)
