@@ -91,4 +91,6 @@ git push origin main
 
 ### 🏆 Badge Earned: 🟨 Terminal Explorer
 
+Fill out this form to get your badge: https://forms.gle/c8EdJNzM9iokL5RY7
+
 **Next:** → [Level 3](https://github.com/awssccuba/aws-ec2-zero-to-hero-launch-challenge/blob/main/level-3-install-software/README.md)
