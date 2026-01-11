@@ -90,4 +90,6 @@ git push origin main
 
 ---
 
+Fill out this form to get your badge: https://forms.gle/Bx3xD4rck9qfxNLr7
+
 **Next:** → [Level 6](../level-6-lifecycle/README.md)
