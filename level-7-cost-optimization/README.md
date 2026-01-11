@@ -118,7 +118,8 @@ git push origin main
 ---
 
 ### 🚀 Next Steps
-
+- **Fill out this form:** https://forms.gle/1SpoeL9efRTBA7xAA
+- **NOTE:** YOU MUST HAVE RECIEVED ALL 7 BADGES TO RECIEVE A CERTIFICATE
 - **AWS Certification:** Study for AWS Cloud Practitioner  
 - **Expand Skills:** Learn S3, Lambda, RDS  
 - **Build Projects:** Deploy your own applications  
